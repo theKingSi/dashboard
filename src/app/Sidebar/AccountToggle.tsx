@@ -2,7 +2,7 @@ import React from 'react'
 import { FiPlusCircle } from "react-icons/fi";
 
 export const AccountToggle = () => {
-  return <div className='border-b mb-4 mt-2 pb-4 border-stone-300'>
+  return <div className='border-t mt-5 pb- pt-3 border-stone-300'>
 <button className='flex p-0.5 hover:bg-stone-200 rounded transition-colors relative gap-2 w-full items-center'>
 <img
   src="https://api.dicebear.com/9.x/adventurer/svg?seed=Vivian&backgroundType=solid,gradientLinear&backgroundRotation=0,360,20&backgroundColor=c0aede,d1d4f9"
@@ -12,8 +12,8 @@ export const AccountToggle = () => {
     <span className='text-sm font-semibold block'>
         theKinguy
     </span>
-    <span className='text-xs block text-stone-500'>
-        theKinguy.dev
+    <span className='text-[10px] block text-stone-500'>
+        theKinguy@gmail.com
     </span>
   </div>
 

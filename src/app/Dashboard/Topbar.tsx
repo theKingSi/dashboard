@@ -15,8 +15,8 @@ export const Topbar = () => {
         </div>
 
         <Link 
-        href=''
-        className='flex text-sm items-center gap-2 bg-stone-100 transition-colors hover:bg-violet-100 hover:text-violet-700 px-3 py-1.5 rounded'>
+        href='/'
+        className='flex text-sm items-center gap-2 bg-stone-100 transition-colors hover:bg-violet-100 hover:text-fuchsia-500 px-3 py-1.5 rounded'>
              <FiCalendar />
              <span>mar 6 - jul 7</span>
         </Link>
