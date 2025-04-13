@@ -3,9 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
-  variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+
 
 export const metadata: Metadata = {
   title: "KingDance 1.0",
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} text-stone-950 bg-stone-100`}
+        className={`${inter.className} text-stone-950 bg-gray-50`}
       >
         {children}
       </body>

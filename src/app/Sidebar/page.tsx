@@ -1,15 +1,15 @@
 "use client";
 
 import React from 'react';
-import { AccountToggle } from './AccountToggle';
+import { Plan } from './Plan';
 import { Search } from './Search';
 import { Select } from './Select';
-import { Plan } from './Plan';
+import { AccountToggle } from './AccountToggle';
 
-export const Sidebar = () => {
+const Sidebar = () => {
   return (
     <div>
-      <div className='overflow-y-scroll flex flex-col justify-between fixed top-0  h-screen'>
+      <div className='overflow-y-scroll flex flex-col flex-1 justify-between fixed top-0 w-[220px] p-2 h-screen '>
         <div>
         <Plan />
           <Search />
@@ -23,3 +23,5 @@ export const Sidebar = () => {
     </div>
   );
 };
+
+export default Sidebar

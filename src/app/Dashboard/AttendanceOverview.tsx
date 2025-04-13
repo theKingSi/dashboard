@@ -31,7 +31,7 @@ const data: AttendanceData[] = [
 
 const AttendanceOverview = () => {
   return (
-    <div className='col-span-12 p-4 rounded border border-stone-300 shadow-sm'>
+    <div className='col-span-12 p-4 rounded border border-stone-300 shadow-lg mb-10'>
       <h2 className="text-2xl font-bold mb-6">Attendance Overview by Level</h2>
       {data.map((item, index) => (
         <div key={index} className="mb-6">

@@ -24,7 +24,7 @@ const classes = [
 
 export default function Graph() {
   return (
-    <div className="col-span-8 overflow-hidden rounded border border-stone-300 shadow">
+    <div className="col-span-8 overflow-hidden rounded border border-stone-300 shadow-lg">
       <div className="max-w-xl mx-auto p-4">
         <h2 className="text-2xl font-semibold mb-4 text-center text-cyan-500">Today's Classes</h2>
         <div className="space-y-4">

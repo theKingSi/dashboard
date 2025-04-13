@@ -1,72 +1,81 @@
-import React from "react"
-import {
-  FiCalendar,
-  FiBarChart2,
-  FiBell,
-  FiShield,
-  FiUsers,
-  FiClipboard,
-} from "react-icons/fi"
+import { CalendarCheck, BarChart3, Bell, UserCheck, FileSpreadsheet, MessageSquare } from "lucide-react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import RevealOnScroll from "@/components/reveal-on-scroll"
 
-const features = [
-  {
-    icon: <FiCalendar className="text-cyan-500 text-3xl" />,
-    title: "Easy Attendance Tracking",
-    desc: "Mark attendance with just a few clicks. Support for multiple types: present, absent, and late.",
-  },
-  {
-    icon: <FiBarChart2 className="text-cyan-500 text-3xl" />,
-    title: "Detailed Analytics",
-    desc: "Generate comprehensive reports to analyze attendance patterns and identify trends.",
-  },
-  {
-    icon: <FiBell className="text-cyan-500 text-3xl" />,
-    title: "Automated Notifications",
-    desc: "Send automated alerts to parents and administrators for absent students.",
-  },
-  {
-    icon: <FiShield className="text-cyan-500 text-3xl" />,
-    title: "Secure Access Control",
-    desc: "Role-based access ensures that users only see information relevant to them.",
-  },
-  {
-    icon: <FiUsers className="text-cyan-500 text-3xl" />,
-    title: "Multi-level Organization",
-    desc: "Organize by levels (100–500) and departments for university-style attendance.",
-  },
-  {
-    icon: <FiClipboard className="text-cyan-500 text-3xl" />,
-    title: "Bulk Operations",
-    desc: "Import student lists, mark attendance for classes, and generate bulk reports.",
-  },
-]
+export default function FeaturesSection() {
+  const features = [
+    {
+      icon: <CalendarCheck className="h-10 w-10 text-cyan-500" />,
+      title: "Real-time Attendance",
+      description:
+        "Track attendance in real-time with our intuitive interface. No more paper registers or manual data entry.",
+    },
+    {
+      icon: <BarChart3 className="h-10 w-10 text-fuchsia-500" />,
+      title: "Comprehensive Analytics",
+      description:
+        "Gain insights with detailed attendance reports and analytics to identify patterns and improve student engagement.",
+    },
+    {
+      icon: <Bell className="h-10 w-10 text-cyan-500" />,
+      title: "Automated Notifications",
+      description: "Send automated alerts to parents and administrators about absences and attendance issues.",
+    },
+    {
+      icon: <UserCheck className="h-10 w-10 text-fuchsia-500" />,
+      title: "Student Profiles",
+      description:
+        "Access comprehensive student profiles with attendance history, contact information, and performance metrics.",
+    },
+    {
+      icon: <FileSpreadsheet className="h-10 w-10 text-cyan-500" />,
+      title: "Export Reports",
+      description: "Generate and export detailed attendance reports in multiple formats for administrative purposes.",
+    },
+    {
+      icon: <MessageSquare className="h-10 w-10 text-fuchsia-500" />,
+      title: "Communication Tools",
+      description:
+        "Built-in messaging system to communicate with students, parents, and staff about attendance matters.",
+    },
+  ]
 
-const DetailsSection = () => {
   return (
-    <section className="min-h-screen bg-white px-4 py-16 flex flex-col items-center justify-center">
-      <div className="max-w-7xl w-full text-center mb-12 px-2">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-          Comprehensive Attendance Management
-        </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          Our platform offers powerful tools for administrators, teachers, and students to streamline attendance tracking.
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl">
-        {features.map((item, i) => (
-          <div
-            key={i}
-            className="bg-white rounded-2xl border border-gray-200 shadow-md p-6 text-left hover:shadow-lg transition"
-          >
-            <div className="bg-cyan-100 w-fit p-3 rounded-lg mb-4">{item.icon}</div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-1">{item.title}</h3>
-            <p className="text-sm text-gray-600">{item.desc}</p>
+    <section id="features" className="py-20 bg-white relative z-10">
+      <div className="container max-w-7xl mx-auto px-4 md:px-6">
+        <RevealOnScroll className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+          <div className="space-y-2">
+            <div className="inline-block rounded-lg bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 px-3 py-1 text-sm">
+              Features
+            </div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              Everything You Need to Manage Attendance
+            </h2>
+            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Our platform offers a comprehensive suite of tools designed to streamline attendance management and
+              improve educational outcomes.
+            </p>
           </div>
-        ))}
+        </RevealOnScroll>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((feature, index) => (
+            <RevealOnScroll key={index} delay={index * 100}>
+              <Card className="border-2 border-gray-100 hover:border-cyan-500/30 transition-all hover:shadow-lg group">
+                <CardHeader>
+                  <div className="mb-2 transform transition-transform group-hover:scale-110 group-hover:rotate-3 duration-300">
+                    {feature.icon}
+                  </div>
+                  <CardTitle>{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base">{feature.description}</CardDescription>
+                </CardContent>
+              </Card>
+            </RevealOnScroll>
+          ))}
+        </div>
       </div>
     </section>
   )
 }
-
-export default DetailsSection
