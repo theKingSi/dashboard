@@ -41,9 +41,13 @@ export const NavBar = () => {
         </button>
       </nav>
 
-      {/* Mobile Nav */}
-      {mobileMenuOpen && (
-        <div className="md:hidden flex flex-col items-center space-y-6 py-6 bg-background border-t">
+      {/* Mobile Nav with animation */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="flex flex-col items-center space-y-6 py-6 bg-background border-t">
           <Link href="#features" className="text-base font-medium hover:text-cyan-400" onClick={() => setMobileMenuOpen(false)}>Features</Link>
           <Link href="#how-it-works" className="text-base font-medium hover:text-cyan-400" onClick={() => setMobileMenuOpen(false)}>How It Works</Link>
           <Link href="#pricing" className="text-base font-medium hover:text-cyan-400" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
@@ -56,7 +60,7 @@ export const NavBar = () => {
             Get Started
           </Link>
         </div>
-      )}
+      </div>
     </header>
   );
 };
