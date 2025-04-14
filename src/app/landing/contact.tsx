@@ -50,12 +50,9 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-white relative z-10 overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute top-0 right-0 -z-10 w-96 h-96 rounded-full bg-cyan-500/10 blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 -z-10 w-96 h-96 rounded-full bg-fuchsia-500/10 blur-3xl"></div>
+    <section id="contact" className="py-20 bg-gradient-to-br from-cyan-500/10 to-fuchsia-500/10relative z-10 overflow-hidden">
 
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 mx-auto max-w-7xl">
         <RevealOnScroll className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
           <div className="space-y-2">
             <div className="inline-block rounded-lg bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 px-3 py-1 text-sm">
@@ -67,13 +64,11 @@ export default function ContactSection() {
             </p>
           </div>
         </RevealOnScroll>
-
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           <RevealOnScroll className="order-2 md:order-1">
             <Card
-              className={`border-2 border-gray-100 shadow-lg overflow-hidden transition-all duration-500 ${
-                isSubmitted ? "animate-success-bounce" : "hover:border-cyan-500/30"
-              }`}
+              className={`border-2 border-gray-100 shadow-lg overflow-hidden transition-all duration-500 ${isSubmitted ? "animate-success-bounce" : "hover:border-cyan-500/30"
+                }`}
             >
               <CardContent className="p-6">
                 {isSubmitted ? (
@@ -89,9 +84,8 @@ export default function ContactSection() {
                     <h3 className="text-xl font-bold mb-4">Send us a message</h3>
                     <div className="space-y-4">
                       <div
-                        className={`relative transition-all duration-300 ${
-                          activeField === "name" ? "transform -translate-y-1" : ""
-                        }`}
+                        className={`relative transition-all duration-300 ${activeField === "name" ? "transform -translate-y-1" : ""
+                          }`}
                       >
                         <Input
                           name="name"
@@ -100,11 +94,10 @@ export default function ContactSection() {
                           onChange={handleChange}
                           onFocus={() => setActiveField("name")}
                           onBlur={() => setActiveField(null)}
-                          className={`border-2 bg-transparent transition-all duration-300 ${
-                            activeField === "name"
+                          className={`border-2 bg-transparent transition-all duration-300 ${activeField === "name"
                               ? "border-cyan-500 shadow-[0_0_15px_rgba(6,182,212,0.25)]"
                               : "border-gray-200"
-                          }`}
+                            }`}
                           required
                         />
                         {activeField === "name" && (
@@ -113,9 +106,8 @@ export default function ContactSection() {
                       </div>
 
                       <div
-                        className={`relative transition-all duration-300 ${
-                          activeField === "email" ? "transform -translate-y-1" : ""
-                        }`}
+                        className={`relative transition-all duration-300 ${activeField === "email" ? "transform -translate-y-1" : ""
+                          }`}
                       >
                         <Input
                           name="email"
@@ -125,11 +117,10 @@ export default function ContactSection() {
                           onChange={handleChange}
                           onFocus={() => setActiveField("email")}
                           onBlur={() => setActiveField(null)}
-                          className={`border-2 bg-transparent transition-all duration-300 ${
-                            activeField === "email"
+                          className={`border-2 bg-transparent transition-all duration-300 ${activeField === "email"
                               ? "border-fuchsia-500 shadow-[0_0_15px_rgba(217,70,239,0.25)]"
                               : "border-gray-200"
-                          }`}
+                            }`}
                           required
                         />
                         {activeField === "email" && (
@@ -138,9 +129,8 @@ export default function ContactSection() {
                       </div>
 
                       <div
-                        className={`relative transition-all duration-300 ${
-                          activeField === "subject" ? "transform -translate-y-1" : ""
-                        }`}
+                        className={`relative transition-all duration-300 ${activeField === "subject" ? "transform -translate-y-1" : ""
+                          }`}
                       >
                         <Input
                           name="subject"
@@ -149,11 +139,10 @@ export default function ContactSection() {
                           onChange={handleChange}
                           onFocus={() => setActiveField("subject")}
                           onBlur={() => setActiveField(null)}
-                          className={`border-2 bg-transparent transition-all duration-300 ${
-                            activeField === "subject"
+                          className={`border-2 bg-transparent transition-all duration-300 ${activeField === "subject"
                               ? "border-cyan-500 shadow-[0_0_15px_rgba(6,182,212,0.25)]"
                               : "border-gray-200"
-                          }`}
+                            }`}
                           required
                         />
                         {activeField === "subject" && (
@@ -162,9 +151,8 @@ export default function ContactSection() {
                       </div>
 
                       <div
-                        className={`relative transition-all duration-300 ${
-                          activeField === "message" ? "transform -translate-y-1" : ""
-                        }`}
+                        className={`relative transition-all duration-300 ${activeField === "message" ? "transform -translate-y-1" : ""
+                          }`}
                       >
                         <Textarea
                           name="message"
@@ -173,11 +161,10 @@ export default function ContactSection() {
                           onChange={handleChange}
                           onFocus={() => setActiveField("message")}
                           onBlur={() => setActiveField(null)}
-                          className={`min-h-[120px] border-2 bg-transparent resize-none transition-all duration-300 ${
-                            activeField === "message"
+                          className={`min-h-[120px] border-2 bg-transparent resize-none transition-all duration-300 ${activeField === "message"
                               ? "border-fuchsia-500 shadow-[0_0_15px_rgba(217,70,239,0.25)]"
                               : "border-gray-200"
-                          }`}
+                            }`}
                           required
                         />
                         {activeField === "message" && (
@@ -236,10 +223,10 @@ export default function ContactSection() {
                     <div className="space-y-1">
                       <p className="font-medium">Email Us</p>
                       <a
-                        href="mailto:info@edutrack.com"
+                        href="kingstech@edutrack.com"
                         className="text-cyan-500 hover:text-fuchsia-500 transition-colors"
                       >
-                        info@edutrack.com
+                        kingstech@edutrack.com
                       </a>
                     </div>
                   </div>
@@ -251,7 +238,7 @@ export default function ContactSection() {
                     <div className="space-y-1">
                       <p className="font-medium">Call Us</p>
                       <a href="tel:+1234567890" className="text-cyan-500 hover:text-fuchsia-500 transition-colors">
-                        +1 (234) 567-890
+                        +234 8163 690 424
                       </a>
                     </div>
                   </div>
@@ -275,8 +262,8 @@ export default function ContactSection() {
                   </div>
                 </div>
               </div>
-</div>
-        
+            </div>
+
           </RevealOnScroll>
         </div>
       </div>

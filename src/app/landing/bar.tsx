@@ -4,8 +4,8 @@ import React from 'react';
 
 export const Bar: React.FC = () => {
   return (
-    <div className="flex items-center justify-center bg-gray-700 text-white min-h-[60vh] px-4">
-      <RevealOnScroll className="text-center space-y-6 max-w-xl">
+    <section className="flex items-center justify-center bg-gray-700 text-white min-h-[60vh] px-4">
+      <RevealOnScroll className="text-center space-y-6 mx-auto max-w-7xl">
         <h1 className="text-2xl md:text-3xl font-bold">
           Ready to Streamline Your Attendance Management?
         </h1>
@@ -23,6 +23,6 @@ export const Bar: React.FC = () => {
           </Link>
         </div>
         </RevealOnScroll>
-    </div>
+    </section>
   );
 };

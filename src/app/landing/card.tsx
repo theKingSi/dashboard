@@ -27,7 +27,7 @@ const stats = [
 
 const StatsCards: React.FC = () => {
   return (
-    <div className="bg-gray-50 min-h-[70vh] flex items-center justify-center px-4 sm:px-6 shadow-sm lg:px-8 mt-10 transition">
+    <div className="bg-gray-50 min-h-[70vh] flex items-center justify-center px-4 sm:px-6 shadow-sm lg:px-8 mt-10 transition-all">
       <RevealOnScroll className="max-w-7xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {stats.map((stat, index) => (
           <div
